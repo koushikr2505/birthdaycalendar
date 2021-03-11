@@ -105,7 +105,7 @@ body {
     float: left;
     width: 122px;
     margin: 0 5px;
-    background: #ffffff;
+    /* background: #ffffff; */
 }
 
 .cal__day:before {
@@ -119,9 +119,22 @@ body {
 }
 
 .day--empty {
-    background: #dee4e6;
+    /* background: #dee4e6; */
 }
 
+.birthCount {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.year-error {
+    color: red;
+    position: absolute;
+    top: -25px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
 .day--empty:after {
     content: "\02368";
     position: absolute;
@@ -148,6 +161,13 @@ body {
     height: 120px;
     border: 1px solid #ccd1d3;
     border-top: none;
+}
+
+.cal__day.day--empty .day__people {
+    background: #dee4e6;
+}
+.cal__day .day__people{
+    background: #fff;
 }
 
 .day__person {
@@ -194,6 +214,7 @@ body {
 .app__inputs {
     display: -webkit-flex;
     display: flex;
+    position: relative;
 }
 
 .app__txt, .app__input {
@@ -287,4 +308,15 @@ code, pre {
     font-family: 'Source Code Pro', monospace;
     background: #f5fafc;
     padding: 1px 6px;
+}
+
+
+.error-message {
+    position: absolute;
+    top: -25px;
+    left: 16px;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
